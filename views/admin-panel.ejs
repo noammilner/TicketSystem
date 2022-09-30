@@ -1,0 +1,71 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Please address the following tickets according to their urgency</h1>
+
+<!-- Form that send ticket resolution details to server -->
+
+<form class="resolve-form" action="/resolve" method="post">
+  <h5>Resolve tickets:</h5>
+  <div class="form-group">
+    <select class="form-control" name="ticketNum">
+      <option selected>Select Ticket</option>
+      <% openTickets.forEach(function(ticket){ %>
+      <option><%= ticket.ticketNumber %></option>
+      <% }); %>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <textarea
+      class="form-control"
+      aria-label="With textarea"
+      name="solution"
+      placeholder="Describe the solution for the incident..."
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Resolve</button>
+</form>
+
+<!-- Shows unresolved tickets -->
+
+<div class="box">
+  <% openTickets.forEach(function(ticket){ %>
+  <div class="item">
+    <form class="tickets-form">
+      <p>
+        <span style="text-decoration: underline; font-weight: bold"
+          >Ticket Number:</span
+        >
+        <%= ticket.ticketNumber %>
+      </p>
+      <p>
+        <span style="text-decoration: underline; font-weight: bold"
+          >Employee Name:</span
+        >
+        <%= ticket.employeeName %>
+      </p>
+      <p>
+        <span style="text-decoration: underline; font-weight: bold"
+          >Department:</span
+        >
+        <%= ticket.departmentName %>
+      </p>
+      <p>
+        <span style="text-decoration: underline; font-weight: bold"
+          >Urgency:</span
+        >
+        <%= ticket.urgencyLevel %>
+      </p>
+      <p>
+        <span style="text-decoration: underline; font-weight: bold"
+          >Incident Description:</span
+        >
+        <%= ticket.incidentDescp %>
+      </p>
+    </form>
+  </div>
+  <% }); %>
+</div>
+
+<%- include("partials/footer.ejs") %>

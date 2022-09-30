@@ -1,0 +1,59 @@
+body {
+    margin: auto;
+    width: 50%;
+    background-color: #A5C9CA;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+}
+
+form {
+    padding: 5% 15%;
+    width:  auto;
+}
+
+h1 {
+    margin-top: 5%;
+    text-align:  center;
+}
+
+h5   {
+    text-align:  center;
+}
+
+p {
+    margin-top: 5%;
+}
+
+button {
+    margin-top: 2%;
+}
+
+.no-tickets {
+    margin-top: 5%;
+    text-align:  center;
+}
+
+
+.form-group {
+    margin-bottom: 2%;
+}
+
+.item {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid #AEBDCA;
+}
+
+.box {
+    width: auto;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.tickets-form {
+    color: black;
+}

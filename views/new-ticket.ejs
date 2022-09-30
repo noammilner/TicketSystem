@@ -1,0 +1,40 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Submit an IT Ticket</h1>
+<form action="/submit" method="post">
+  <div class="form-group">
+    <label>Full Name:</label>
+    <input
+      type="text"
+      class="form-control"
+      name="fullName"
+      placeholder="Enter your name"
+    />
+  </div>
+  <div class="form-group">
+    <label>Department:</label>
+    <select class="form-control" name="department">
+      <option selected>Select department</option>
+      <option>Sales</option>
+      <option>HR</option>
+      <option>Security</option>
+      <option>Finance</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Urgency:</label>
+    <select class="form-control" name="urgency">
+      <option selected>Select urgency</option>
+      <option>Critical</option>
+      <option>Normal</option>
+      <option>Not Urgent</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Describe your incident:</label>
+    <textarea class="form-control" name="incident" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit Ticket</button>
+</form>
+
+<%- include("partials/footer.ejs") %>
