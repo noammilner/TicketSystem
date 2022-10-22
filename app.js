@@ -92,10 +92,9 @@ app.post("/submit", function (req, res) {
       await mongoose.connection.close();
     } else {
       console.log(`Succesfuly created ticket ${ticket.ticketNumber}!`);
+      res.redirect("/ticket-created");
     }
   });
-
-  res.redirect("/ticket-created");
 });
 
 app.post("/resolve", function (req, res) {
@@ -111,9 +110,9 @@ app.post("/resolve", function (req, res) {
       console.log(
         "Successfully resolved " + numAffected.modifiedCount + " ticket."
       );
+      res.redirect("/admin-panel");
     }
   );
-  res.redirect("/admin-panel");
 });
 
 app.listen(3000, function () {
