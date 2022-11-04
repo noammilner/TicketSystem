@@ -24,6 +24,17 @@ Make sure to install all required dependencies:
 npm install
 ```
 
+Create a `.env` file at the project's root directory which specifies the following variables:
+
+```
+AD_USERNAME="Username used to operate LDAP with"
+AD_PASSWORD="Password for said user"
+BASE_DN="Distinguished name (DN) of your domain"
+URL="ldap://domain controller FQDN"
+AD_GROUP="Name of AD group for administrators"
+SECRET="This should be a long complex secret"
+```
+
 If you wish to change the target MongoDB server/port make sure to do so inside app.js.
 If you're happy with the default settings, continue to run MongoDB and the application:
 
