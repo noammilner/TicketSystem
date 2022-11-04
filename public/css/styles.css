@@ -1,10 +1,13 @@
 body {
-    margin: auto;
-    width: 50%;
     background-color: #A5C9CA;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: large;
+}
+
+.main {
+    margin: auto;
+    width: 50%;
 }
 
 form {
@@ -27,6 +30,16 @@ p {
 
 button {
     margin-top: 2%;
+}
+.login-box {
+    width: 50%;
+    margin: auto;
+}
+
+.logo-img {
+    position: absolute;
+    top: 10%;
+    left: 0;
 }
 
 .no-tickets {
@@ -57,3 +70,27 @@ button {
 .tickets-form {
     color: black;
 }
+
+.topnav {
+    background-color: #2a4646;
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
