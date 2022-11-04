@@ -1,10 +1,12 @@
 
-# HD Ticket System
+# HIVE - a Ticket System
 
-This project is an IT/HD ticket system that enables users to easily submit tickets.
+HIVE is an IT/HD ticket system that enables users to easily submit tickets.
 Additionally, IT administrators can easily view all unresolved tickets, and resolve them.
 
 The tickets/incidents themselves are based on MongoDB, as each ticket is a document in the collection.
+
+The project uses LDAP for authentication and permission control.
 
 ## Installation
 
