@@ -83,7 +83,7 @@ app.get("/", function (req, res) {
     res.render("new-ticket")
   } else {
     res.render("login", {
-      status: ""
+      message: ""
     })
   }
 });
@@ -123,7 +123,7 @@ app.get("/admin-panel", async function (req, res) {
     }
   } else {
     res.render("login", {
-      status: ""
+      message: ""
     })
   }
 });
@@ -193,7 +193,7 @@ app.post("/login", async (req, res) => {
     }
   } catch (error) {
     res.render("login", {
-      status: "Invalid username or password"
+      message: "Invalid username or password"
     })
     console.log(error)
   }
